@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Frame Animation Example</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <!-- Анимированный куб -->
+        <a-box position="5 1.6 -3" rotation="0 45 45" color="#6CF9D9" 
+               animation="property: rotation; to: 0 405 0; loop: true; dur: 5000"></a-box>
+        
+        <!-- Анимированный цилиндр (вращение) -->
+        <a-cylinder position="15 1.9 -5" color="#6CF9D9" height="4" 
+                     animation="property: rotation; to: 0 360 0; loop: true; dur: 3000"></a-cylinder>
+        
+        <!-- Анимированная сфера (изменение радиуса) -->
+        <a-sphere position="25 1.9 -5" color="#6CF9D9" radius="2" 
+                   animation="property: radius; to: 3; dir: alternate; loop: true; dur: 2000"></a-sphere>
+        
+        <!-- Текст -->
+        <a-text value="Добро пожаловать в A-Frame!" position="10 2 -4" color="#FF0000"></a-text>
+        
+        <!-- Источник света -->
+        <a-light type="point" position="5 10 -5" intensity="1"></a-light>
+    </a-scene>
+</body>
+</html>
